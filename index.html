@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sum Up Inputs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      text-align: center;
+    }
+    input[type="number"] {
+      width: 80px;
+      padding: 5px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sum Inputs Example</h1>
+  <input type="number" id="input1" value="0">
+  <input type="number" id="input2" value="0">
+  <br>
+  <button onclick="addAndUpdate()">Add and Update</button>
+
+  <script>
+    function addAndUpdate() {
+      const input1 = document.getElementById("input1");
+      const input2 = document.getElementById("input2");
+
+      const val1 = parseFloat(input1.value) || 0;
+      const val2 = parseFloat(input2.value) || 0;
+
+      const result =  val1 + val1 + val2;
+      input1.value = result;
+    }
+  </script>
+</body>
+</html>
