@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sum Up Inputs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 50px;
-      text-align: center;
-    }
-    input[type="number"] {
-      width: 80px;
-      padding: 5px;
-      margin: 10px;
-      font-size: 16px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+    <meta charset="UTF-8">
+    <title>Sum Up Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+            background-image: url('img/krenko.jpg'); /* Sample tile */
+            background-repeat: repeat;
+            background-size: auto; /* Ensures it's not stretched */
+        }
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 {
+            color: black;
+            text-shadow:
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                1px  1px 0 #fff;
+        }
+        body {
+            color: black;
+            text-shadow:
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                1px  1px 0 #fff;
+        }
   </style>
 </head>
 <body>
-  <h1>Sum Inputs Example</h1>
-  <input type="number" id="input1" value="0">
-  <input type="number" id="input2" value="0">
+  <h1>&#x1F4C8;KRENKOlator&#x1F4C8;</h1>
+  <div class="input-group">
+    <label for="input1"># of 1/1 Goblin creature tokens</label>
+    <input type="number" id="input1" value="0" min="0" step="1">
+  </div>
+
+  <div class="input-group">
+    <label for="input2"># of other Goblins</label>
+    <input type="number" id="input2" value="0" min="0" step="1">
+  </div>
   <br>
-  <button onclick="addAndUpdate()">Add and Update</button>
+  <button onclick="addAndUpdate()">Create X 1/1 red Goblin creature tokens,<br>where X is the number of Goblins you control.</button>
 
   <script>
     function addAndUpdate() {
